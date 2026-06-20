@@ -10,3 +10,7 @@ class DomainEmailNotVerifiedError(DomainError):
     """This is the error when email is not verified and verified."""
     pass
 
+class DomainInvalidEmailOrPasswordError(DomainError):
+    """This is the error when email or password is not valid."""
+    pass
+

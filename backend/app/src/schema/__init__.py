@@ -7,7 +7,8 @@ class PaginatedSchema(BaseModel):
     skip: int = Field(ge=1, default=1)
     limit: int = Field(ge=10, default=10)
 
-
+class EndpointTags(str):
+    AUTHENTICATION  = "Authentication"
 class PaginatedOutput(BaseModel):
     start_page: int
     end_page: int
@@ -30,3 +31,10 @@ class SuccessfulResponseSchema(BaseModel):
     verification_token: str | None = None
     sign_up_steps: int | None = None
     email: str | None = None
+
+
+class StatusMessage(str):
+    ALREADY_EXISTS = "Already Exists"
+    OK = "Ok"
+    ERROR="Error"
+    FAIL='Fail'

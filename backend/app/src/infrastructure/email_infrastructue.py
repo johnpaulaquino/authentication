@@ -6,7 +6,6 @@ from pydantic import NameEmail
 
 
 from app.config import MAIL_CONFIGURATION, RESEND_TEMPLATE_PATH
-from app.src.core.constants import ConstantsData, Constants
 
 
 class EmailInfrastructure:

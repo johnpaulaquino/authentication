@@ -6,8 +6,7 @@ from sqlmodel import SQLModel, Field
 
 
 class BaseUsers(SQLModel):
-    email : str = Field(unique=True, nullable=True )
-    password : str = Field(nullable=True)
+    email : str = Field(unique=True, nullable=True)
 
 
 class Users(BaseUsers, table=True):
@@ -25,4 +24,8 @@ class Users(BaseUsers, table=True):
 
 
 class CreateUsers(BaseUsers):
-    pass
+    password: str = Field(nullable=True)
+
+class CreateUserWithFirebase(SQLModel):
+    email : str = Field(unique=True, nullable=True)
+    user_uid: str = Field(unique=True)

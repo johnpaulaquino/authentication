@@ -16,7 +16,7 @@ engine = create_async_engine(url=POSTGRES_DB_URL,
                                  "prepared_statement_cache_size": 0,
                              }
                              )
-print(POSTGRES_DB_URL)
+
 LocalSession = async_sessionmaker(bind=engine,
                                   autoflush=False,
                                   expire_on_commit=False,

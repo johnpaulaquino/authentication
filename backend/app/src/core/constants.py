@@ -16,6 +16,9 @@ class Constants(BaseSettings):
     DB_HOST: str
     DB_PORT: int
 
+    #Base endpoint name
+    BASE_ENDPOINT : str = "/api/v1/project/"
+
     #email
     MAIL_USERNAME: str
     MAIL_PASSWORD: SecretStr
@@ -37,6 +40,7 @@ class Constants(BaseSettings):
     DB_PROD_PASSWORD : str
 
     #firebase configuration
+    FB_API_KEY : str
     FB_PRIVATE_KEY_ID :str
     FB_PROJECT_ID: str
     FB_PRIVATE_KEY : str

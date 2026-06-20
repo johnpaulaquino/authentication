@@ -1,7 +1,7 @@
-from app.src.exceptions.domain_exceptions import DomainEmailVerifiedError
+from app.src.exceptions.domain_exceptions import DomainEmailNotVerifiedError
+from app.src.exceptions.http_exceptions import DataBadRequestException
 
 EXCEPTION_MAPPER = {
-        DomainEmailVerifiedError           : "Replace with HTTP Exceptions lambda e: DataBaseDataNotFoundException('Entity not found', message=str(e))",
+    DomainEmailNotVerifiedError:lambda e: DataBadRequestException("Email not verified",message=str(e)),
 
-        }   
-    
+}

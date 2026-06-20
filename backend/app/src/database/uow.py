@@ -13,8 +13,8 @@ class SQLUnitOfWork:
 
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         if exc_val:
-            await self._db.rollback()
+            await self.__db.rollback()
         else:
-            await self._db.commit()
-        await self._db.close()
+            await self.__db.commit()
+        await self.__db.close()
 
