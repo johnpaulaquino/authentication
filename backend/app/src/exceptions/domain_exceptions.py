@@ -14,3 +14,11 @@ class DomainInvalidEmailOrPasswordError(DomainError):
     """This is the error when email or password is not valid."""
     pass
 
+
+class DomainInvalidOrExpiredTokenError(DomainError):
+    """This is the error when token is expired or invalid."""
+    pass
+
+class DomainUserNotFoundError(DomainError):
+    """This is the error when user is not found."""
+    pass

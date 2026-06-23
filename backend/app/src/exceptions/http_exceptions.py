@@ -68,7 +68,7 @@ class UnAuthorizeAccessException(BaseAppExceptions):
 
 class DataBadRequestException(BaseAppExceptions):
     def __init__(self, message_status='fail', message="Bad request.",
-                 status_code=status.HTTP_400_BAD_REQUEST, headers=None):
+                 status_code=status.HTTP_400_BAD_REQUEST):
         self.message_status = message_status
 
         self.message = message

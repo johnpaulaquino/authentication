@@ -17,13 +17,16 @@ def app_exception_handler(_: Request, exc: Exception):
             content = {"status_code": http_exc.status_code,
                        'status'     : http_exc.message_status,
                        'message'    : http_exc.message}
+
             return JSONResponse(status_code=http_exc.status_code,
                                 content=content,
                                 headers=http_exc.headers)
+
         if isinstance(exc, BaseAppExceptions):
             content = {"status_code": exc.status_code,
                        'status'     : exc.message_status,
                        'message'    : exc.message}
+
             return JSONResponse(status_code=exc.status_code,
                                 content=content,
                                 headers=exc.headers)

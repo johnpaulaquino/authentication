@@ -2,7 +2,7 @@ import sys
 from fastapi import FastAPI
 import uvicorn
 
-from app.src.api.v1.auth_route import v1_auth_router
+from app.src.api.v1.firebase_auth_route import v1_auth_router
 from app.src.core.constants import ConstantsData
 from app.src.exceptions import app_exception_handler, BaseAppExceptions
 from app.src.exceptions.domain_exceptions import DomainError
